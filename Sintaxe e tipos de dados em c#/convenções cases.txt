@@ -1,0 +1,10 @@
+As convenções cases são um padrão de escrita na linguagem. Isto é uma forma de melhora na legibilidade do código, 
+mas não é uma regra para compilação, ou seja, não utilizar essas convenções, o código ainda compila. 
+
+Na linguagem c# são utilizada as convenções: 
+
+camelCase - utilizada para nomes de variaveis. Ex: produto, pessoaFisica. 
+
+PascalCase - utilizada para nomes de Classes, Atributos e metodos. Ex: "Carro" (Classe) / "AbrirPorta" (metodo).
+
+
