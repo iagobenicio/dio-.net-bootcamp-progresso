@@ -1,0 +1,13 @@
+No c# existem formas de converter tipos, que são: Parse ou Convert. 
+
+Para converter através do "Parse" deve se iniciar com o tipo que deseja converter.
+
+Ex: int.Parse("1"); retorna 1 em  tipo inteiro
+
+Para converter através do "Convert" deve utilizar a classe "Convert" e acessar o metodo de conversão. 
+
+Ex: Convert.ToInt32("1"); retorna 1 em tipo inteiro
+
+A diferença entre essas duas formas é que através do "Convert", caso o valor retornado seja nulo, ele retornará o 
+valor como 0, já no caso do "Parse" isso ira ocasionar um erro. 
+
