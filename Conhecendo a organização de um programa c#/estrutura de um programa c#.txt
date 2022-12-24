@@ -1,0 +1,6 @@
+Todo projeto criado em C# contém um arquivo de extensão .csproj, dentro desse arquivo há informações referente ao 
+projeto em especifico. 
+
+No C#, também há uma forma de organização de projetos, que é através de uma "solution". Uma solution é forma de 
+fazer agrupamento de projetos, onde, dentro desta solution (sln) pode haver um projeto que conheça outro projeto, ou seja,
+pode-se aproveitar, por exemplo, classes de outros projetos, evitando assim repetição de codigo. 
