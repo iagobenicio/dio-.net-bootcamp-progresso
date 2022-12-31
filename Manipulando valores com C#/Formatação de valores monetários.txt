@@ -1,0 +1,5 @@
+No C# há uma forma de represetar valores monetários juntamente com o seu simbolo. Para isso, é possivel fazer
+através da interporlação de string, adicionando: ":C" ao final do valor. EX: ${moeda:C}. 
+
+":C" representa o simbolo do valor que será representado, neste caso, isso varia de acordo com a configuração
+da máquina que o código esta rodando.  
