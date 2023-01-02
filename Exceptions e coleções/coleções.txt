@@ -1,0 +1,66 @@
+Existem fromas de armanezar vários valores do mesmo tipo, por exemplo: Arrays e Listas. Através destes, podemos
+acessar um determinado valor através do seu indicie. Porém, há casos que deve-se trabalhar com regras especificas,
+o que, utilizar essas estruturas, pode ser de dificultoso. 
+
+Coleções - FILA 
+
+A fila é um tipo de coleção que contém uma regra: o primeiro elemento que entrar, deve ser o primeiro a sair. 
+Esta é uma forma adequada de utilizar para casos que a ordem deve ser respeitada. No C#, para trabalhar com "FILA", 
+usa-se a coleção "Queue". Uma FILA também possui vários valores de um mesmo tipo, podemos declara uma FILA com apenas
+valores do tipo "inteiro" -> Queue<int> fila = new Queue<int>(); 
+Para alimentar essa estrutura, utilizamos o metodo: "Enqueue". Desta forma podemos fazer:
+
+fila.Enqueue(2);
+fila.Enqueue(4);
+fila.Enqueue(8);
+
+Assim, obtém uma estrutua de FILA que contém 3 elementos. Se removermos um elemento, neste caso, o elemento a ser
+removido será o 2, pois o 2 foi o primeiro elemento a entrar (primeiro que entrar é o primeiro a sair). 
+
+Removendo da fila
+
+fila.Dequeue();
+
+elementos após remoção
+
+1º elemento: 4
+2º elemento: 8
+
+Se adicionarmos outro elemento, ele ficará no fim da fila. 
+
+fila.Enqueue(3);
+
+1º elemento: 4
+2º elemento: 8
+3º elemento: 3
+
+
+Coleções - PILHA
+
+Uma pilha também contém uma regra: o último elemento que entrar, deve ser o primeiro a sair. Este caso é justamente
+o inverso de uma FILA. Para declararmos uma PILHA, fazemos: Stack<int> pilha = new Stack<int>();
+
+Para alimentar essa estrutura, ultilizamos o metodo: "Push". Desta forma podemos fazer:
+
+pilha.Push(2);
+pilha.Push(4);
+pilha.Push(6);
+
+Pilha:
+
+1º elemento: 2
+2º elemento: 4
+3º elemento: 6
+
+
+Removendo o ultimo elemento: 
+
+pilha.Pop();
+
+pilha após remoção:
+
+1º elemento: 2
+2º elemento: 4
+
+
+
