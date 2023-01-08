@@ -1,0 +1,13 @@
+Ternário: 
+
+O ternário é uma alternativa da estrutura IF ELSE. Com o IF ternário é possivel obter a vantagem de deixar o código
+mais limpo para casos simples de verificações. Através do IF ternário é possivel fazer uma verificação IF ELSE en
+apenas uma linhga. 
+
+Desconstrução: 
+
+
+A desconstrução de um objeto é processo inverso da construção de um objeto, onde, é possivel pegar os valores dos
+atributos de um objeto e passar para variaveis diferentes. Para poder desconstruir um objeto é necessário adicionar
+um metódo chamado Desconstruct na classe e passar a palavra "out" antes do tipo dos parametros deste metódo. 
+A instrução é parecida com um construtor, porém, os parametros é quem recebe os valores dos atributos. 
