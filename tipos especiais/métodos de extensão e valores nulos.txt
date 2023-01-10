@@ -1,0 +1,20 @@
+tipos nulos:
+
+Tipos nulos são variaveis que além de aceitar o seu tipo, aceita o valor nulo. Ex: 
+"int? idade = 25 / int? idade = null;"
+
+Para que uma váriavel aceita valores nulos, é precis o passar o "?" ao lado do tipo da mesma. Aceitar valores nulos
+é eficiente quando não se sabe se virá um valor, isto faz com que não retorne um erro. É um método seguro de fazer
+com que o código tenha o tratamento para possiveis retornos nulos.  
+
+
+Métodos de extensão:
+
+Métodos de extensão é uma forma de fazer com que os tipos consigam acessar um determinado metodo. Por exemplo, 
+todas variáveis inteiras acessar um determinado metódo. 
+
+Para criar um metódo de extensão, é preciso criar uma classe estatic e um metódo estatico que será acessado por 
+variaveis do determinado tipo, por exemplo: "public static bool isPar(this int numero);". O "this int" no parametro
+é que faz o metódo ser de extensão, ou seja, todas variaveis inteiras vão ter acesso ao método "isPar". 
+
+A vantagem disto é a simplicidade, fica um código mais limpo e também evita a repetição de código. 
