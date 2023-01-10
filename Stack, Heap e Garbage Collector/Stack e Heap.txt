@@ -1,0 +1,11 @@
+Stack e Heap
+
+No C# existem dois tipos de memória para o armazenamento de valores declarados no códgio.
+
+Stack: Um tipo de memória do C# que serve para armazenar valores mais simples, neste caso, as váriaveis declaradas
+e o seu valor ficam armazenadas neste tipo de memória. O Stack é uma pilha, ou seja, conforme novas váriaveis são
+declaradas, uma fica sobre a outra neste tipo de memória. 
+
+Heap: Um tipo de memória que serve para armazenar, por exemplo, objetos. Quando um objeto é instanciado, e uma
+variavel recebe esta instancia, a variável fica no Stack e o valor é uma referência para o Heap, ou seja, o Heap
+que armazena o objeto, e este objeto é referenciado por uma variável que o estancia e que fica armazenada no Stack. 

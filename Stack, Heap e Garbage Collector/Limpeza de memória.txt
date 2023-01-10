@@ -1,0 +1,3 @@
+O C# trabalha por de baixo dos panos para a limpeza de memória. Todo valor declarado fica armazenado na memória ram, ou seja, pode haver sistemas com muitos valores armazenado na memória, o que pode acabar ficar um sistema pesado.
+Portanto, a limpeza de memória é algo eficiente para deixar o sistema leve. A limpeza de memória ocorre a eliminação de valores na memória que não estão sendo mais usados. Os objetos da memória Heap, só são eliminados se não tiver
+mais referencias dele na memória Stack. O C# tem forma inteligente de fazer esta limpeza na memória Heap, através do Gargabe Collector. 
