@@ -1,0 +1,23 @@
+Herança:
+
+A herança é um pilar da programação orientada a objetos, onde sua finalidade é fazer com que uma calsse possa 
+utilizar as propriedades e metódos de uma classe pai. A vantagem é pode evitar a repetição de código, por exemplo, 
+a classe Aluno e Professor tem caracteristicas em comum: Nome e Idade. Ao invés de ter Nome e Idade nas duas classes, 
+estes atributos pode conter em uma classe Pai, por exemplo: Classe Pessoa, onde Aluno e Professor herdam da classe 
+pessoa, onde pode ter acesso aos atributos e metódos. Para que uma classe herde no C#, é preciso utilizar o ":"
+Ex: public class Aluno : Pessoa  /  public class Professor : Pessoa
+
+
+Polimorfismo:
+
+Polimorfimos são formas diferentes de objetos se comportarem, porém, utilizando um mesmo metódo. 
+Para que possa ser feito um polimorfismo (tempo de execução), a classe que herda da classe Pai tem que
+sobrescrever o determinado metódo. Para que seja possivel sobrescrever o metódo da classe pai, o mesmo 
+tem que conter a palavra reservada "virtual" ao lado do "public", EX: public virtual void Apresentar(). 
+Tanto a classe Aluno e Professor podem utilizar este metódo para se comportar de sua determinada forma, 
+ou seja, formas diferentes. Para que elas possam utilizar este metódo, precisa ser feito a sobrescrita 
+através da palavra "override". 
+ 
+
+
+ 

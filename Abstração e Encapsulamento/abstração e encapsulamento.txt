@@ -1,0 +1,13 @@
+Abstração:
+
+abstrair é obter algo do mundo real e abstrair no sistema diante determinado contexto
+
+
+
+Encapsulamento: 
+
+Encapsulamento é uma forma de fazer com que determinados atributos de um objeto não seje alterado por fora, ou seja, 
+é proteger os valores que há nela, de forma com que, para ser alterado, apenas seja através de metódos que possam conter,
+por exemplo, validações. Ex: uma classe ContaCorrente possui uma propriedade chamada "saldo", onde apenas a classe, através 
+de determinados metódos, como por exemplo: Sacar e Depositar, é que vão alterar este atributo. Para evitar
+que o atributo tenha seu valor manipulado por fora, o mesmo tem que estar definido como "privado" (private decimal saldo). 
