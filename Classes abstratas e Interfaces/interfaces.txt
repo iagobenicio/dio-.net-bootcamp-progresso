@@ -1,0 +1,6 @@
+interfaces é parecido com classes abstratas, porém, não possuem caracteristicas, e seus metódos devem ser obrigatoriamente
+implementados por classes que estaja implementado este interface. 
+interfaces também não podem ser estanciadas, ela serve para que outras classes implemente ela e tenha acesso aos 
+metódos presente, tem como objetivo servir de contrato para outras classes. 
+
+

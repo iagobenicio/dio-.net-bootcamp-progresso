@@ -1,0 +1,7 @@
+Classes abstratas é um tipo de classe que tem como objetivo servir de modelo para classes filhas. 
+Classes abstratas não podem ser instanciadas, podem conter caracteristicas e metódos abstratos. 
+Para criar uma classe abstrata, a mesma tem que conter a palavra "abstract" entre a palavra "public" 
+e "class". Ex: public abstract class Conta.
+ 
+Metódos abstratos não contém corpo e devem ser sobrescritos nas classes filhas. Com metódos abstratos, 
+o corpo fica a cargo das classes filhas, isto permite que as classes filhas possam ter comportamento diferente. 

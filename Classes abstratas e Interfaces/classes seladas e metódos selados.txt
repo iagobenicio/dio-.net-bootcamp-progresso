@@ -1,0 +1,8 @@
+Classes seladas tem como objetivo fazer com que nenhuma classe herde dela. Se existem uma classe Professor que
+esteja selada, a classe Diretor não pode herdar de classe Professor. 
+
+Já os metódos selados tem como objetivo fazer com que as classes filhas não possam sobrescrever os metódos selados. 
+
+Para criar classes seladas: public selead class Classe
+
+metódos selados: public selead void Metódo(){}
