@@ -1,0 +1,104 @@
+Para trabalhar com o entity framework é preciso primeiramente instalalo. Esta instalção ocorre em nivel de máquina, 
+ou seja, é instalado apenas uma vez. O comando para instalar é: dotnet tool install --global dotnet-ef
+
+Pacotes que precisam ser instalados: 
+
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer -> este refere-se ao banco de dados que será 
+utilizado no projeto. A instalação destes pacotes ocorrem a nivel projeto. 
+
+
+O entity framework ajuda na realização de querys no banco de dados por trabalhar com ORM. Todas essas ações
+são feitas através de metódos. O EF também faz as migrations que são representações das tabelas a serem criadas. 
+
+Dentro do arquivo appsettings.Development.json ou appsettings.json é onde colocamos a string que conexão
+com o banco de dados. A diferença entre este arquivos é que o Development é usado em nivel de desenvolvimento,
+enquanto o outro arquivo é a nivel de produção. 
+No caso o Sql server a string de conexão fica dentro de "ConnectionString": 
+"ConnectionString"{
+	"Conexao": "Server=localhost"\\sqlexpress;Initial Catalog=Agenda;Integrated Security=True;TrustServerCertificate=True"
+}
+
+Neste caso esta conexão esta no arquivo "appsettings.Development.json" pois é apenas em desenvolvimento. 
+
+
+------Contexto e Entidade-------
+
+
+O contexto é uma classe criada no projeto que serve para representar o Banco de dados. A classe deve herdar de DbContext e passar as options do tipo DbContextOptions através do construtor
+por herança. 
+
+O metódo "DbSet" deve ser passado um tipo de Entitidade, esta entidade é um modelo do que terá na tabela do banco de dados. A entidade é uma classe que possuem seus campos, ou seja, podemos
+ter entidade produto: nome, preco, peso ; usuario: nome, sobrenome, idae; etc.... e esta classe é passada no metodo DbSet: public DbSet<Contato> contatos {get; set;}. Neste caso, o "Contato" 
+é a Entidade que terá seus valores manipulados, ou seja, seus atributos. 
+
+
+------Controllers-----
+
+
+O controllador é o responsável por fazer todas as ações, ou seja, criar dados, atualizar dados, excluir, pegar dados. Também nele podemos fazer vlaidações. 
+
+cada metódo é responsável por uma ação. 
+
+A classe controller deve conter emcima do public class: 
+
+[ApiController]
+[Route("[controller]")]
+
+e também herdar de ControllerBase.
+
+Dentro da classe criada para controlar as ações de uma determinada entidade pode se fazer uma injeção de dependencias, ex: 
+
+private readonly AgendaContext _context;
+
+public ContatoController(AgendaContext context)
+{
+   _context = context;
+}
+
+o atributo _context é o que terá a instancia da classe "AgendaContext" criada para ter o contexto do banco de dados  "Agenda". O construtor recebe este contexto e passa para o atributo _context. 
+
+A vantagem de utilizar injeção de dependencias é que envitar ter que ficar chamado novas instancias da classe que resepresenta o contexto do banco de dados em que cada metódo de ação, ou seja, evita
+varias instancias dentro da memória sem necessidade. 
+
+o _context é um atributo privado e por isso é acessado apenas pela propria classe. 
+
+
+-------Ações---------- 
+
+
+Cada metódo é responsável por uma ação, ex de um criação de contato: 
+
+[HttpPost]
+public IActionResult Create(Contato contato)
+{
+  _context.Add(contato);
+  _context.SaveChanges();
+  return Ok(contato);
+}
+
+o "[HttPost]" precisa ser passado em cima do metódo para dizer que este metódo irá criar um novo dado no banco. Caso fosse pra deletar um dado ficaria: "[HttpDelete]". 
+
+o metódo possui um parametro do tipo contato (entidade), pois o dados que são recebidos é um modelo de Contato. 
+O _context.Add(contato) adiciona este contato no banco, e _context.SaveChanges() salva todas as alterações. 
+
+por fim, o return é que será retorna ao client da requisição. Neste caso o "Ok" é um metódo que representa o codigo http "200", ou seja, a requisição foi feita com sucesso e retorna ao client o proprio contato. 
+
+
+
+------Swagger UI-------- 
+
+O Swagger UI é uma interface voltado ao desenvolverdor que pode utilizar para documentar a API e fazer testes através de requisições. O Swagger é iniciado dentro do aplicação quando o servidor é rodado. 
+Nele pode-se fazer as ações de forma mais amigável, observar retorno de dados, código de status, adiciona dados, etc... 
+
+
+
+
+
+
+
+
+
+   
+
+

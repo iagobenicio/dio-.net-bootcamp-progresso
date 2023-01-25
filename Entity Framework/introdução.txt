@@ -1,0 +1,4 @@
+O entity framework é uma ferramenta que ajuda nas requisições de dados do banco de dados, sem a necessidade
+de ter que fazer um comando SQL puro, podendo fazer através de metódos da propria ferramenta. 
+O Entity Framework possui o ORM (Object-Relational Mappers) responsável por fazer o mapeamento dos objetos da base 
+de dados para aplicação orientada a objetos.  
